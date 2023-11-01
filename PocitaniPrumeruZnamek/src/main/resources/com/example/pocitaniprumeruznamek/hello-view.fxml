@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="330.0" prefWidth="526.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pocitaniprumeruznamek.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <GridPane prefHeight="162.0" prefWidth="486.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="59.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="117.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="148.0" text="Jméno Studenta:" textAlignment="CENTER">
+            <font>
+               <Font size="19.0" />
+            </font>
+         </Label>
+         <ChoiceBox fx:id="studentName" prefWidth="150.0" GridPane.columnIndex="1">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </ChoiceBox>
+         <Label alignment="CENTER" text="Předmět:" GridPane.rowIndex="2">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <ChoiceBox fx:id="subject" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      </children>
+   </GridPane>
+    <Button onAction="#onHelloButtonClick" text="Udělat průměr známek z daného předmětu">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <TextField fx:id="markOutput" prefHeight="0.0" prefWidth="486.0">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </TextField>
+</VBox>
